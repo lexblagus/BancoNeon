@@ -1,0 +1,379 @@
+/* 
+================================================================================
+ ////////        ///////                                                        
+    /////          /////                                                        
+    ////           ////                                                         
+   /////           ////                                                         
+   /////           ////                                                         
+   /////          /////                                                         
+   ////           /////                                                         
+  /////           ////                                                          
+  /////           ////                             ///                          
+  ///// ////     /////     ///// ////     //////   //////////    ////     ///// 
+  //// /   ///   /////   ////  / ////    ///   //// //  ////    /////   //   ///
+ //////    ///   ////   ////    ////    ////   ////     ////    ////   ///   ///
+ /////     ////  ////   ////    ////   /////   ////    /////    ////   ////  ///
+ ////      //// /////  ////     ////   ////    ////    /////    ////   //////   
+ ////     ///// ///// /////     ////   ////   /////    ////    /////   ///////  
+/////     ///// ////  /////     ///    ////   ////     ////    ////     /////// 
+/////     ////  ////  /////    ////    ////   ///      ////    ////       ///// 
+////      //// /////  ////     ////  //   /////       /////   /////  ////  //// 
+////     ////  /////  ////    /////  //               ////    /////  ////   /// 
+////     ///   /////  ////    ////  /////////////     ////   ////// /////   /// 
+ ///    ///    ////  / ///   / /// / /////////////    ////  /  /// /  //   ///  
+  ///////       /////   /////   ///   ////////////     /////   ////    /////    
+                                      ////////////                              
+                                     //         //                              
+                                    //          //                              
+                                    //          /                               
+                                    //         /                                
+                                     //      //                                 
+                                      ///////                                   
+================================================================================
+Teste de admissão ao Banco Neon
+================================================================================
+gray background:     #F2F3F5
+wrapper border:      #7D7D80
+body font color:     #737375
+button yellow background: #FFE634
+button blue hover:   #1CA7DD
+button gray border:  #F2F3F5
+gradient button:     #1DAFD5 - #28E9AB
+button yellow:       #FFE634
+horizontal rule:     #D6D6D6
+footer blue light:   #1C79AD
+footer blue dark:    #114B6E
+*/
+
+@media (max-width:1000px){ /* mobile only */ }
+@media (min-width:999px){ /* desktop only */ }
+
+/* =============================================================================
+   Boilerplate
+============================================================================= */
+body, table, textarea, input, select, button{ /* base typography */
+	font-family:sans-serif;
+	font-weight:400; /* normal */
+	font-size:15px;
+	line-height:18px;
+	color:#737375;
+}
+hr{ background-color:#D6D6D6; }
+
+/* -----------------------------------------------------------------------------
+   Buttons
+----------------------------------------------------------------------------- */
+button{
+	/*width:auto;*/
+	/*min-width:42px;*/
+	/*max-width:auto;*/
+	/*height:auto;*/
+	/*min-height:0;*/
+	/* max-height:1em; */
+	margin:1px 1px 1px 1px;
+	padding:5px 10px 3px 10px;
+	overflow:hidden;
+
+	font-size:75%;
+	font-weight:bold;
+	color:#000;
+	white-space:nowrap;
+	text-transform:uppercase;;
+
+	background-color:transparent;
+	background-repeat:no-repeat;
+	background-position:-12px 0px;
+	background-image:none; /* also fix Android FF gradient */
+
+	border-style:solid;
+	border-width:2px;
+	border-color:#000000;
+	border-radius:4em;
+	/* box-shadow:0px 0px 0px 0px rgba(0,0,0,0.25); */
+
+	cursor:pointer;
+}
+header button{
+	font-size:80%;
+	padding-left:1em;
+	padding-right:1em;
+}
+/* special buttons */
+header nav.breadcrumbs button{
+	color:#737375;
+	border-color:#737375;
+	text-align: center;
+	/*width:0;*/
+	overflow:visible;
+	white-space:normal;
+}
+header aside button.cta{
+	color:#737375;
+	background-color:#FFE634;
+	border-style:none;
+}
+main section.slider button.slide{
+	font-size:3rem;
+	font-weight:100;
+	height:2.5ex;
+	width:2.5ex;
+	border-color:#DADBDD;
+	color:#DADBDD;
+}
+button.read-more{
+	padding:1em 3em;
+	background: #1dafd6; /* Old browsers */
+	background: -moz-linear-gradient(left,  #1dafd6 0%, #28e8aa 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #1dafd6 0%,#28e8aa 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #1dafd6 0%,#28e8aa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1dafd6', endColorstr='#28e8aa',GradientType=1 ); /* IE6-9 */
+	border-style: none;
+	color:#fff;
+	letter-spacing:0.8ex;
+}
+
+/* Hovers */
+button:hover, 
+header nav.breadcrumbs button:hover,
+header aside button.cta:hover,
+main section.slider button.slide:hover{
+	background:none;
+	background-color:#1CA7DD;
+	color:#fff;
+	border-color:#1CA7DD;
+}
+
+button.read-more:hover{
+	background-color:#114B6E;
+}
+
+
+/* =============================================================================
+   Layout
+============================================================================= */
+body{
+}
+@media (max-width:999px){ /* desktop only */
+	body{
+		height:100%;
+		overflow:auto;
+	}
+}
+
+/* Table simulation (for grid layout). Oh, yes, it is better than those grid layout stuff */
+.disp-table                      { display:table; }
+.disp-table>.disp-row            { display:table-row; }
+.disp-table>.disp-row>.disp-cell { display:table-cell; }
+@media (max-width:999px){
+	.disp-table                      ,
+	.disp-table>.disp-row            ,
+	.disp-table>.disp-row>.disp-cell { display:block; }
+}
+
+/* Text alignment */
+.align-left{ text-align:left; }
+.align-center{ text-align:center; }
+.align-right{ text-align:right; }
+
+/* Floating */
+.float-left{ float:left; }
+.float-right{ float:right; }
+
+/* Etc */
+ .full-width{ width:100%; }
+
+
+/* -----------------------------------------------------------------------------
+   Wrapper
+----------------------------------------------------------------------------- */
+#wrapper{
+	height:100%;
+}
+@media (max-width:1000px){ /* mobile only */
+
+}
+@media (min-width:999px){ /* desktop only */
+	#wrapper{
+		max-width:1000px;
+		margin:0 auto;
+		border-style:solid;
+		border-color:#D6D6D6;
+		border-width:2px;
+	}
+}
+
+
+/* -----------------------------------------------------------------------------
+   Header
+----------------------------------------------------------------------------- */
+header{
+	background-color:#fff;
+	padding:10px;
+}
+	header nav.breadcrumbs{
+		vertical-align:top;
+	}
+	header aside.call-to-action{
+		/*float:right;*/
+		width:150px;
+		vertical-align:top;
+	}
+	header h1.logo{
+		display:inline;
+		vertical-align:top;
+		/*margin:0 auto;*/
+		margin:0;
+		margin-top:0;
+		padding:0;
+		font-weight:400;
+		line-height:1rem;
+		font-size:1.00rem;
+		color:#000;
+		font-weight:bold;
+	}
+@media (max-width:499px){ /* mobile only */
+	.disp-table                      ,
+	.disp-table>.disp-row            ,
+	.disp-table>.disp-row>.disp-cell { display:block; }
+	header nav.breadcrumbs{
+		width:100%;
+	}
+	header h1.logo{
+	}
+	header aside.call-to-action{
+		width:100%;
+	}
+}
+@media (min-width:500px){ /* desktop only */
+	header.disp-table                      { display:table; }
+	header.disp-table>.disp-row            { display:table-row; }
+	header.disp-table>.disp-row>.disp-cell { display:table-cell; }
+}
+
+
+/* -----------------------------------------------------------------------------
+   Body
+----------------------------------------------------------------------------- */
+main{
+	background-color:#F2F3F5;
+	display:block;
+	padding:0 0 20mm 0;
+}
+	/* HERO */
+	main figure.hero{
+		margin:0 auto;
+		text-align: center;
+	}
+		main figure.hero figcaption.title{
+			position: relative;
+			top: 0ex;
+			color:#fff;
+			font-size: 225%;
+			line-height: 1.2em;
+			text-shadow:0px 0px 2px #000;
+			margin-bottom:-5ex;
+		}
+			main figure.hero figcaption.title .p1{
+				font-weight:100;
+			}
+			main figure.hero figcaption.title .p2{
+				font-weight:900;
+			}
+		main figure.hero img{
+			width:100%;
+		}
+	/* SLIDER */
+	main section.slider{
+		text-align:center;
+		display:block;
+		margin:10mm 0 0 0;
+		padding:0 10mm 0 10mm;
+	}
+		main section.slider button.slide{
+			/* vertical-align:top; */
+			margin:30mm 5mm 10mm 5mm;
+			padding-bottom: 0.5ex;
+		}
+		main section.slider ol.slide-wrapper{
+			display:inline-block;
+		}
+			main section.slider ol.slide-wrapper li.slide{
+				background-color:#fff;
+				display:inline-block;
+				margin:0mm 0mm 0mm 0mm;
+				padding:7.5mm;
+				border-radius:10mm;
+				box-shadow:0 5mm 10mm 0mm hsla(0,0%,0%,0.25);
+				min-width:50mm;
+			}
+				figure.icon-big{}
+					figure.icon-big img{ width:25mm; height:25mm; }
+					figure.icon-big figcaption.icon-title{
+						text-transform:uppercase;
+						color:#127BBC;
+						font-weight:900;
+						font-size:1.2rem;
+						margin-top:2mm;
+					}
+
+/*
+@media (max-width:1000px){
+	main section.slider{}
+		main section.slider button.slide{ margin:0mm 5mm 0mm 5mm; }
+		main section.slider ol.slide-wrapper{ display:block; }
+			main section.slider ol.slide-wrapper li.slide{ margin:5mm 5mm 20mm 5mm; min-width:0mm; }
+}
+@media (min-width:999px){
+}
+*/
+
+/* -----------------------------------------------------------------------------
+   Footer
+----------------------------------------------------------------------------- */
+.debug footer{ background-color:hsla(180, 100%,  50%, 0.1); }
+footer{
+	background-color:#1C79AD;
+	color:#114B6E;
+}
+	footer ol{
+	}
+		footer ol li{
+			padding:2.5mm;
+			vertical-align:middle;
+			/*width:33%;*/
+		}
+		footer .about-address,
+		footer .contact-phone,
+		footer .social-area{
+		}
+		footer .about-address{
+			font-size:75%;
+			line-height:1.2em;
+		}
+		footer .contact-phone{
+			margin:0 5mm;
+			white-space:nowrap;
+		}
+			footer .contact-phone .p3{ text-transform:uppercase; font-size:80%; }
+			footer .contact-phone .p4{ color:#fff; font-size:150%;  }
+		footer .social-area{}
+			footer .social-area img.social-icon{
+				width:7.5mm;
+				height:7.5mm;
+			}
+
+
+@media (max-width:499px){ /* mobile only */
+	footer.disp-table                      ,
+	footer.disp-table>.disp-row            ,
+	footer.disp-table>.disp-row>.disp-cell { display:block; /*width:100%;*/ }
+}
+
+
+/* =============================================================================
+   Furniture
+============================================================================= */
+
+
+
+
