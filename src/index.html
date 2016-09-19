@@ -36,6 +36,7 @@
 	================================================================================
 	-->
 	<title>Teste de admissão ao Banco Neon</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
 	<link rel="stylesheet" type="text/css" href="css/reset.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/layout.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/animation.css" media="all">
@@ -57,34 +58,24 @@
 					<button class="nav arrow-left">←</button>
 				</nav>
 				<h1 class="logo disp-cell align-center">
-					<img alt="Banco Neon" width="154" height"37" src="img/logo.png">
+					<img alt="Banco Neon" src="img/logo.png">
 				</h1>
 				<aside class="call-to-action disp-cell align-right">
-					<button class="cta download">[↓] baixe o app</button>
+					<button class="cta download">↓ baixe o app</button>
 				</aside>
 			</div>
 		</header>
-		<!--
-		<div class="disp-table full-width"><div class="disp-row full-width">
-			<div class="disp-cell align-right" style="border-right:1px solid #000;">
-				→
-			</div>
-			<div class="disp-cell align-left" style="border-left:1px solid #000;">
-				←
-			</div>
-		</div></div>
-		-->
+
 		<main id="main">
 			<figure class="hero">
 				<figcaption class="title">
-					<span class="p1">Tipo um banco,</span><br>
-					<span class="p2">só que mais seguro</span>
+					<div class="p1">Tipo um banco,</div>
+					<div class="p2">só que mais seguro</div>
 				</figcaption>
-				<img src="img/hero.png" alt="Tipo um banco, só que mais seguro">
+				<a href="/"><img src="img/hero.png" alt="Tipo um banco, só que mais seguro"></a>
 			</figure>
 			<section class="slider">
-				<button class="slide previous" style="float:left;">&lt;</button>
-				<button class="slide next" style="float:right;">&gt;</button>
+				<button class="slide previous">&lt;</button>
 				<ol class="slide-wrapper">
 					<li class="slide first">
 						<figure class="icon-big">
@@ -104,8 +95,10 @@
 						(slide C)
 					</li>
 				</ol>
+				<button class="slide next">&gt;</button>
 			</section>
 		</main>
+
 		<footer class="disp-table full-width">
 			<ol class="disp-row">
 				<li class="disp-cell align-left about-address">
@@ -125,6 +118,9 @@
 				</li>
 			</ol>
 		</footer>
+
+		<script type="text/javascript" src="js/uix.js"></script>
+		<script type="text/javascript">var uix = new UIX();</script>
 	</div>
 </body>
 </html>
