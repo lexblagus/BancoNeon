@@ -1,7 +1,44 @@
+/* 
+================================================================================
+ ////////        ///////                                                        
+    /////          /////                                                        
+    ////           ////                                                         
+   /////           ////                                                         
+   /////           ////                                                         
+   /////          /////                                                         
+   ////           /////                                                         
+  /////           ////                                                          
+  /////           ////                             ///                          
+  ///// ////     /////     ///// ////     //////   //////////    ////     ///// 
+  //// /   ///   /////   ////  / ////    ///   //// //  ////    /////   //   ///
+ //////    ///   ////   ////    ////    ////   ////     ////    ////   ///   ///
+ /////     ////  ////   ////    ////   /////   ////    /////    ////   ////  ///
+ ////      //// /////  ////     ////   ////    ////    /////    ////   //////   
+ ////     ///// ///// /////     ////   ////   /////    ////    /////   ///////  
+/////     ///// ////  /////     ///    ////   ////     ////    ////     /////// 
+/////     ////  ////  /////    ////    ////   ///      ////    ////       ///// 
+////      //// /////  ////     ////  //   /////       /////   /////  ////  //// 
+////     ////  /////  ////    /////  //               ////    /////  ////   /// 
+////     ///   /////  ////    ////  /////////////     ////   ////// /////   /// 
+ ///    ///    ////  / ///   / /// / /////////////    ////  /  /// /  //   ///  
+  ///////       /////   /////   ///   ////////////     /////   ////    /////    
+                                      ////////////                              
+                                     //         //                              
+                                    //          //                              
+                                    //          /                               
+                                    //         /                                
+                                     //      //                                 
+                                      ///////                                   
+================================================================================
+                              Lex Blagus, web systems architect <http://blag.us>
+================================================================================
+*/
+
+/* =============================================================================
+   Hero titles
+============================================================================= */
 main figure.hero figcaption.title .p1,
 main figure.hero figcaption.title .p2{
-		/* position:relative;
-		top:-10em; */
 }
 
 @keyframes animationTitle {
@@ -26,4 +63,49 @@ main figure.hero figcaption.title .p1 {
 main figure.hero figcaption.title .p2 {
 	animation-name: animationTitle;
 	animation-duration:2.5s;
+}
+
+
+/* =============================================================================
+   Sliders
+============================================================================= */
+@keyframes animationSliderActivate {
+	  0% { left:300%; }
+	100% { left:0; }
+}
+main section.slider ol.slide-wrapper li.slide.active {
+	animation-name:animationSliderActivate;
+	animation-duration:0.5s;
+}
+
+
+@keyframes animationSliderInactivate {
+	  0% { left:0; }
+	100% { left:-300%; }
+}
+main section.slider ol.slide-wrapper li.slide.inactive {
+	animation-name:animationSliderInactivate;
+	animation-duration:0.5s;
+}
+
+
+/* =============================================================================
+   Text within slider
+============================================================================= */
+@keyframes animationSliderActivateInner {
+	  0% { top:-1000px; }
+	100% { top:0px; }
+}
+main section.slider ol.slide-wrapper li.slide.active .slide-wrapper{
+	animation-name:animationSliderActivateInner;
+	animation-duration:0.5s;
+}
+
+@keyframes animationSliderInactivateInner {
+	  0% { top:0px; }
+	100% { top:-1000px; }
+}
+main section.slider ol.slide-wrapper li.slide.inactive .slide-wrapper{
+	animation-name:animationSliderInactivateInner;
+	animation-duration:0.5s;
 }

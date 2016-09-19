@@ -3,37 +3,39 @@
 <head>
 	<meta charset="utf-8">
 	<!--
-	================================================================================
-	 ////////        ///////                                                        
-	    /////          /////                                                        
-	    ////           ////                                                         
-	   /////           ////                                                         
-	   /////           ////                                                         
-	   /////          /////                                                         
-	   ////           /////                                                         
-	  /////           ////                                                          
-	  /////           ////                             ///                          
-	  ///// ////     /////     ///// ////     //////   //////////    ////     ///// 
-	  //// /   ///   /////   ////  / ////    ///   //// //  ////    /////   //   ///
-	 //////    ///   ////   ////    ////    ////   ////     ////    ////   ///   ///
-	 /////     ////  ////   ////    ////   /////   ////    /////    ////   ////  ///
-	 ////      //// /////  ////     ////   ////    ////    /////    ////   //////   
-	 ////     ///// ///// /////     ////   ////   /////    ////    /////   ///////  
-	/////     ///// ////  /////     ///    ////   ////     ////    ////     /////// 
-	/////     ////  ////  /////    ////    ////   ///      ////    ////       ///// 
-	////      //// /////  ////     ////  //   /////       /////   /////  ////  //// 
-	////     ////  /////  ////    /////  //               ////    /////  ////   /// 
-	////     ///   /////  ////    ////  /////////////     ////   ////// /////   /// 
-	 ///    ///    ////  / ///   / /// / /////////////    ////  /  /// /  //   ///  
-	  ///////       /////   /////   ///   ////////////     /////   ////    /////    
-	                                      ////////////                              
-	                                     //         //                              
-	                                    //          //                              
-	                                    //          /                               
-	                                    //         /                                
-	                                     //      //                                 
-	                                      ///////                                   
-	================================================================================
+================================================================================
+ ////////        ///////                                                        
+    /////          /////                                                        
+    ////           ////                                                         
+   /////           ////                                                         
+   /////           ////                                                         
+   /////          /////                                                         
+   ////           /////                                                         
+  /////           ////                                                          
+  /////           ////                             ///                          
+  ///// ////     /////     ///// ////     //////   //////////    ////     ///// 
+  //// /   ///   /////   ////  / ////    ///   //// //  ////    /////   //   ///
+ //////    ///   ////   ////    ////    ////   ////     ////    ////   ///   ///
+ /////     ////  ////   ////    ////   /////   ////    /////    ////   ////  ///
+ ////      //// /////  ////     ////   ////    ////    /////    ////   //////   
+ ////     ///// ///// /////     ////   ////   /////    ////    /////   ///////  
+/////     ///// ////  /////     ///    ////   ////     ////    ////     /////// 
+/////     ////  ////  /////    ////    ////   ///      ////    ////       ///// 
+////      //// /////  ////     ////  //   /////       /////   /////  ////  //// 
+////     ////  /////  ////    /////  //               ////    /////  ////   /// 
+////     ///   /////  ////    ////  /////////////     ////   ////// /////   /// 
+ ///    ///    ////  / ///   / /// / /////////////    ////  /  /// /  //   ///  
+  ///////       /////   /////   ///   ////////////     /////   ////    /////    
+                                      ////////////                              
+                                     //         //                              
+                                    //          //                              
+                                    //          /                               
+                                    //         /                                
+                                     //      //                                 
+                                      ///////                                   
+================================================================================
+                              Lex Blagus, web systems architect <http://blag.us>
+================================================================================
 	-->
 	<title>Teste de admissão ao Banco Neon</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
@@ -75,27 +77,43 @@
 				<a href="/"><img src="img/hero.png" alt="Tipo um banco, só que mais seguro"></a>
 			</figure>
 			<section class="slider">
-				<button class="slide previous">&lt;</button>
+				<button id="btt-slider-nav-previous" class="slide previous" data-navigation-offset="-1">&lt;</button>
 				<ol class="slide-wrapper">
-					<li class="slide first">
-						<figure class="icon-big">
-							<img src="img/biometric.png" alt="Biometria">
-							<figcaption class="icon-title">Biometria</figcaption>
-						</figure>
-						<hr>
-						<p>Reconhecimento por selfie ou digital, tudo pra oferecer o máximo de segurança.</p>
-						<p>
-						<button class="read-more">saiba mais</button>
-						</p>
+					<li class="slide active">
+						<div class="slide-wrapper">
+							<figure class="icon-big">
+								<img src="img/biometric.png" alt="Biometria">
+								<figcaption class="icon-title">Biometria</figcaption>
+							</figure>
+							<hr>
+							<p>Reconhecimento por selfie ou digital, tudo pra oferecer o máximo de segurança.</p>
+						</div>
+						<p><button class="read-more">saiba mais</button></p>
 					</li>
-					<li class="slide mid" style="display:none;">
-						(slide B)
+					<li class="slide inactive">
+						<div class="slide-wrapper">
+							<figure class="icon-big">
+								<img src="img/biometric.png" alt="Lorem">
+								<figcaption class="icon-title">Lorem</figcaption>
+							</figure>
+							<hr>
+							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+						</div>
+						<p><button class="read-more">saiba mais</button></p>
 					</li>
-					<li class="slide last" style="display:none;">
-						(slide C)
+					<li class="slide inactive">
+						<div class="slide-wrapper">
+							<figure class="icon-big">
+								<img src="img/biometric.png" alt="Ipsum">
+								<figcaption class="icon-title">Ipsum</figcaption>
+							</figure>
+							<hr>
+							<p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+						</div>
+						<p><button class="read-more">saiba mais</button></p>
 					</li>
 				</ol>
-				<button class="slide next">&gt;</button>
+				<button id="btt-slider-nav-next" class="slide next" data-navigation-offset="1">&gt;</button>
 			</section>
 		</main>
 

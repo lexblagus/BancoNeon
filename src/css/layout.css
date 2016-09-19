@@ -30,7 +30,7 @@
                                      //      //                                 
                                       ///////                                   
 ================================================================================
-Teste de admissão ao Banco Neon
+                              Lex Blagus, web systems architect <http://blag.us>
 ================================================================================
 gray background:     #F2F3F5
 wrapper border:      #7D7D80
@@ -43,6 +43,7 @@ button yellow:       #FFE634
 horizontal rule:     #D6D6D6
 footer blue light:   #1C79AD
 footer blue dark:    #114B6E
+================================================================================
 */
 
 @media (max-width:500px){ /* mobile only */ }
@@ -93,6 +94,9 @@ button{
 
 	cursor:pointer;
 }
+button[disabled]{
+	cursor:default;
+}
 header button{
 	font-size:80%;
 	padding-left:1em;
@@ -120,10 +124,17 @@ main section.slider button.slide{
 	height:2.5ex;
 	width:2.5ex;
 	padding:2.5mm 0 0 0;
-	border-color:#DADBDD;
 	font-size:3rem;
 	font-weight:300;
+	border-color:#7D7D80;
+	color:#7D7D80;
+}
+main section.slider button.slide[disabled],
+main section.slider button.slide[disabled]:hover{
+	border-color:#DADBDD;
 	color:#DADBDD;
+	background:none;
+	background-color:transparent;
 }
 button.read-more{
 	padding:1em 3em;
@@ -147,7 +158,6 @@ main section.slider button.slide:hover{
 	color:#fff;
 	border-color:#1CA7DD;
 }
-
 button.read-more:hover{
 	background-color:#114B6E;
 }
@@ -268,6 +278,7 @@ main{
 	padding:0 0 20mm 0;
 	overflow:hidden;
 }
+
 	/* HERO */
 	main figure.hero{
 		margin:0 auto;
@@ -291,6 +302,7 @@ main{
 		main figure.hero img{
 			width:100%;
 		}
+
 	/* SLIDER */
 	main section.slider{
 		text-align:center;
@@ -306,13 +318,21 @@ main{
 			vertical-align:middle;
 		}
 			main section.slider ol.slide-wrapper li.slide{
-				background-color:#fff;
-				display:inline-block;
+				position:relative;
+				min-width:50mm;
+				max-width:150mm;
 				margin:0mm 0mm 0mm 0mm;
 				padding:7.5mm;
 				border-radius:10mm;
 				box-shadow:0 5mm 10mm 0mm hsla(0,0%,0%,0.25);
-				min-width:50mm;
+				background-color:#fff;
+			}
+			main section.slider ol.slide-wrapper li.slide.active{
+				display:inline-block;
+				overflow:hidden;
+			}
+			main section.slider ol.slide-wrapper li.slide.inactive{
+				display:none;
 			}
 				figure.icon-big{}
 					figure.icon-big img{ width:25mm; height:25mm; }
@@ -323,6 +343,15 @@ main{
 						font-size:1.2rem;
 						margin-top:2mm;
 					}
+				main section.slider ol.slide-wrapper li.slide .slide-wrapper{
+					position:relative;
+				}
+				main section.slider ol.slide-wrapper li.slide.active .slide-wrapper{
+					top:0px;
+				}
+				main section.slider ol.slide-wrapper li.slide.inactive .slide-wrapper{
+					top:-1000px;
+				}
 	@media (max-width:999px){
 		main section.slider button.slide.previous{
 			margin:0mm 5mm 5mm 5mm;
