@@ -98,7 +98,7 @@ main section.slider ol.slide-wrapper li.slide.inactive {
 }
 main section.slider ol.slide-wrapper li.slide.active .slide-wrapper{
 	animation-name:animationSliderActivateInner;
-	animation-duration:0.5s;
+	animation-duration:1s;
 }
 
 @keyframes animationSliderInactivateInner {
@@ -107,7 +107,7 @@ main section.slider ol.slide-wrapper li.slide.active .slide-wrapper{
 }
 main section.slider ol.slide-wrapper li.slide.inactive .slide-wrapper{
 	animation-name:animationSliderInactivateInner;
-	animation-duration:0.5s;
+	animation-duration:1s;
 }
 
 
